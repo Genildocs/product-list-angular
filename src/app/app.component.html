@@ -1,3 +1,10 @@
 <main class="p-3 md:p-5 lg:p-10">
   <h1 class="bold text-3xl">Desserts</h1>
+  <div>
+    @for(item of data; track $index) {
+    <div>
+      {{ item.name }}
+    </div>
+    }
+  </div>
 </main>
