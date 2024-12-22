@@ -1,0 +1,22 @@
+.border-btn {
+  border: 1px solid #ad8a85;
+  transition: border 0.3s ease-in;
+}
+
+.border-btn:hover {
+  border: 1px solid red;
+}
+
+.text-btn {
+  font-weight: 500;
+  transition: color 0.3s ease-in;
+}
+
+.text-btn:hover {
+  color: red;
+}
+
+.border-btnsCounter {
+  border: 1px solid white;
+  border-radius: 50%;
+}

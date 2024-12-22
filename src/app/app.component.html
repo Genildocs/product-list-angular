@@ -1,10 +1,27 @@
 <main class="p-3 md:p-5 lg:p-10">
-  <h1 class="bold text-3xl">Desserts</h1>
   <div>
+    <h1 class="font-bold text-3xl">Desserts</h1>
+  </div>
+  <div class="systemGrid">
     @for(item of data; track $index) {
-    <div>
-      {{ item.name }}
+    <div class="flex flex-col gap-5" id="{{ $index }}">
+      <div class="rounded-lg">
+        <img
+          src="{{ item.image.mobile }}"
+          alt="{{ item.name }}"
+          class="rounded-lg"
+        />
+      </div>
+      <app-btn-count [name]="item.category"></app-btn-count>
+      <div>
+        <p>{{ item.category }}</p>
+        <p>{{ item.name }}</p>
+        <p class="text-red-600 font-semibold">${{ item.price }}</p>
+      </div>
     </div>
     }
+  </div>
+  <div>
+    <app-cart></app-cart>
   </div>
 </main>

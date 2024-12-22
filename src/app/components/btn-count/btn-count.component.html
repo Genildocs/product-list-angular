@@ -1,0 +1,28 @@
+<div>
+  @if(!isValid){
+  <button
+    class="flex items-center gap-2 bg-white px-5 py-4 rounded-[2.5rem] border-btn translate-x-2/4 -translate-y-12 w-[160px]"
+    (click)="showButton()"
+  >
+    <svg-icon src="assets/images/icon-add-to-cart.svg"></svg-icon>
+    <span class="text-btn">Add to Cart</span>
+  </button>
+  } @if(isValid){
+  <button
+    class="flex items-center justify-between gap-2 bg-red-600 px-5 py-4 rounded-[2.5rem] border-btn translate-x-2/4 -translate-y-12 w-[160px]"
+  >
+    <button class="border-btnsCounter py-2 px-1" (click)="decrement()">
+      <svg-icon src="assets/images/icon-decrement-quantity.svg"></svg-icon>
+    </button>
+
+    <span class="text-white">{{ count }}</span>
+
+    <button
+      class="border-btnsCounter py-2 px-1 h-[20px] flex items-center justify-center"
+      (click)="increment()"
+    >
+      <svg-icon src="assets/images/icon-increment-quantity.svg"></svg-icon>
+    </button>
+  </button>
+  }
+</div>

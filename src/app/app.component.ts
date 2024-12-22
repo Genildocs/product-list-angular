@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ServiceService } from './data/service.service';
+import { CartComponent } from './components/cart/cart.component';
+import { BtnCountComponent } from './components/btn-count/btn-count.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CartComponent, BtnCountComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
